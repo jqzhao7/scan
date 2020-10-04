@@ -14,7 +14,7 @@ img_distinguishability = (2480,3508) # 300像素A4纸张, 目标像素
 img = cv2.imread(img_path) # 
 img_size = img.shape  
 print("当前图片的大小是:",img_size)
-img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY);   # 二值化
+img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)  # 二值化
 img_guassian = cv2.GaussianBlur(img_gray, (5,5), 0) # 高斯平滑
 ret, img_threshold = cv2.threshold(img_gray, 0, 150, cv2.THRESH_OTSU | cv2.THRESH_BINARY) 
 #二值化后的图转化为和白图
